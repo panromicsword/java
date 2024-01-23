@@ -7,6 +7,7 @@ class Main
     {
         ArrayList<Integer> x = new ArrayList<Integer>();
         Scanner scan = new Scanner(System.in);
+        //Here enter your limits:
         System.out.print("Enter the limit - ");
         int limit = scan.nextInt();
         int i;
