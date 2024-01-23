@@ -11,5 +11,11 @@ class Main
 		System.out.println("Put the masala");
 		System.out.println("Boil for 2mins");
 		System.out.println("You food is ready");
+		add(2,3);
+	}
+
+	void add(int a,int b)
+	{
+		System.out.println(a+b);
 	}
 }
