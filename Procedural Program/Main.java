@@ -4,7 +4,7 @@ class Main
 {
 	public static void main(String args[])
 	{
-		System.out.println("Way to Prepare Maggie");
+		System.out.println("Way to Prepare Maggie for your Kid");
 		System.out.println("Open the Maggie packet");
 		System.out.println("Pour the Water");
 		System.out.println("Put the maggie strips");
