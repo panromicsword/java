@@ -8,19 +8,19 @@ class Main
 		System.out.println("Fibonacci Series");
 		int child = 0;
 		int parent = 1;
-		int temp;
+		int total;
 		System.out.println(child);
 		System.out.println(parent);
 		int i;
 		int count = 5;
 		for (i=0;i<=count;i++)
 		{
-			temp = child+parent;
+			total = child+parent;
 			child = parent;
-			parent = temp;
-			if(temp%2==0)
+			parent = total;
+			if(total%2==0)
 			{
-				System.out.println(temp);
+				System.out.println(total);
 			}
 		}
 	}

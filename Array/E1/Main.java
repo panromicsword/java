@@ -23,7 +23,9 @@ class Main
 			System.out.println(item);
 		}
 		System.out.println(Arrays.toString(A));
-		
+		int a=10;
+		int b=20;
+		System.out.println(a+b);
 
 	}
 }
