@@ -3,16 +3,24 @@ import java.util.*;
 
 class Insert
 {
-	int[][] nums = new int[2][2];
+	int[][] nums = new int[3][2];
 	int i,j;
 	Insert()
 	{
-		for(i=0;i<2;i++)
+		for(i=0;i<nums.length;i++)
 		{
-			for(j=0;j<2;j++)
+			for(j=0;j<nums[0].length;j++)
 			{
 				nums[i][j]=Integer.MIN_VALUE;
 			}	
+		}
+	}
+
+	public void printing()
+	{
+		for(i=0;i<nums.length;i++)
+		{
+			System.out.println(Arrays.toString(nums[i]));
 		}
 	}
 	// Inserting elements in 2D array
@@ -66,6 +74,37 @@ class Insert
 		catch(ArrayIndexOutOfBoundsException e)
 		{
 			System.out.println("Invalid data");
+		}
+	}
+
+	// Traversing the 2D array
+
+	public void traversal()
+	{
+		for(i=0;i<nums.length;i++)
+		{
+			for(j=0;j<nums[0].length;j++)
+			{
+				System.out.println("Element at index nums["+i+"]["+j+"] - "+nums[i][j]);
+			}
+		}
+	}
+
+	// Searching 2D arrays
+
+	public void search(int s)
+	{
+		for(i=0;i<nums.length;i++)
+		{
+			for(j=0;j<nums[0].length;j++)
+			{
+				if(nums[i][j]==s)
+				{
+					System.out.println("Element is present in index nums["+i+"]["+j+"]");
+					System.out.println("Row - "+i);
+					System.out.println("Column - "+j);
+				}
+			}
 		}
 	}
 }
