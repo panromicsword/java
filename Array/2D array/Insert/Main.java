@@ -16,6 +16,12 @@ class Main
 		in.accessElements(0,1,2);
 		in.accessElements(1,0,2);
 		in.accessElements(1,1,5);
-		in.accessElements(0,2,1);		
+		in.accessElements(0,2,1);
+		System.out.println("---Access cells-----");
+		in.accessElements(0,0);
+		in.accessElements(0,1);
+		in.accessElements(1,0);
+		in.accessElements(1,1);
+		in.accessElements(2,0);		
 	}
 }

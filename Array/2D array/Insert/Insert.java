@@ -55,4 +55,17 @@ class Insert
 			System.out.println("Invalid data");
 		}
 	}
+
+	// Accessing the cells in the array
+
+	public void accessElements(int r,int c)
+	{
+		try{
+			System.out.println(nums[r][c]+" is present in the index of nums["+r+"]"+"["+c+"]");
+		}
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println("Invalid data");
+		}
+	}
 }
