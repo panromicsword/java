@@ -34,6 +34,5 @@ class Main
 		in.search(20);
 		System.out.println("---Deleting elements-----");
 		in.delete(3);
-		
 	}
 }
