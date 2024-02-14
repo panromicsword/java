@@ -5,6 +5,7 @@ class Main
 {
 	public static void main(String args[])
 	{
+		int i,j;
 		Insert in = new Insert();
 		in.insertElements(0,0,1);
 		in.insertElements(0,1,2);
@@ -30,6 +31,9 @@ class Main
 		System.out.println("---Traversing elements-----");
 		in.traversal();
 		System.out.println("---Searching elements-----");
-		in.search(3);
+		in.search(20);
+		System.out.println("---Deleting elements-----");
+		in.delete(3);
+		
 	}
 }

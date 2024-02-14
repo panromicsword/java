@@ -94,6 +94,7 @@ class Insert
 
 	public void search(int s)
 	{
+		boolean check = false;
 		for(i=0;i<nums.length;i++)
 		{
 			for(j=0;j<nums[0].length;j++)
@@ -103,8 +104,34 @@ class Insert
 					System.out.println("Element is present in index nums["+i+"]["+j+"]");
 					System.out.println("Row - "+i);
 					System.out.println("Column - "+j);
+					check = true;	
 				}
 			}
+		}
+		if(check == false)
+		{
+			System.out.println("Element is not present in the array");
+		}
+	}
+
+	public void delete(int value)
+	{
+		boolean status = false;
+		for(i=0;i<nums.length;i++)
+		{
+			for(j=0;j<nums[0].length;j++)
+			{
+				if(nums[i][j]==value)
+				{
+					nums[i][j]=Integer.MIN_VALUE;
+					System.out.println("Elements is present in the index of nums["+i+"]["+j+"] & Deleted Successfully ");
+					status = true;
+				}
+			}
+		}
+		if(status == false)
+		{
+			System.out.println("Elements is not present in the array");
 		}
 	}
 }
