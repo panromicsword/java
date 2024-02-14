@@ -31,7 +31,6 @@ class Temperature
         {
             sum = sum+temps[i];
         }
-
         this.avg = sum/size;
     }
 
