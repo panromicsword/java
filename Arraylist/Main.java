@@ -20,6 +20,7 @@ class Main
         }
         System.out.print("The new ArrayList is - ");
         System.out.print(x);
+        //not required 
     }
 
 }
