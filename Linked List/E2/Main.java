@@ -1,15 +1,21 @@
 import java.lang.*;
 import java.util.*;
+import java.net.URL;
 
 class Main
 {
 	public static void main(String args[])
 	{
 		LinkedList ll = new LinkedList();
-		ll.insert(8);
-		ll.insert(9);
-		ll.insert(10);
-		ll.insert(99);
+		try
+		{
+			ll.insert(new URL("https://open.spotify.com/track/2RB3zzgxWc2RRBaJOkSEka"));
+			ll.insert(new URL("https://open.spotify.com/track/6MsjkottA1KwG7X0rELec5"));
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}	
 		ll.display();
 	}
 }
@@ -21,9 +27,9 @@ class LinkedList
 	{
 		this.head = null;
 	}
-	public void insert(int data)
+	public void insert(URL song)
 	{
-		Node n = new Node(data);
+		Node n = new Node(song);
 		if(head==null)
 		{
 			this.head = n;
@@ -44,7 +50,7 @@ class LinkedList
 		Node current = head;
 		while(current!=null)
 		{
-			System.out.print(current.data+" ");
+			System.out.println(current.data+" ");
 			current = current.nextNode;
 		}
 	}
@@ -52,11 +58,11 @@ class LinkedList
 
 class Node
 {
-	public int data;
+	public URL data;
 	public Node nextNode;
-	Node(int d)
+	Node(URL s)
 	{
-		this.data =d;
+		this.data =s;
 		this.nextNode = null;
 	}
 }
