@@ -7,7 +7,7 @@ class Main
 	{
 		SingleLinkedList sl = new SingleLinkedList();
 		int i;
-		for(i=0;i<10;i++)
+		for(i=0;i<5;i++)
 		{
 			sl.add(i);
 		}
@@ -18,6 +18,8 @@ class Main
 		sl.addAtBeginning(10);
 		sl.addAtBeginning(20);
 		sl.display();
+		System.out.println("");
+		System.out.println("Size "+sl.length());
 	}
 }
 // Node class which is used to ceate a node for linkedlist
@@ -35,6 +37,7 @@ class Node
 class SingleLinkedList
 {
 	Node head; // starting the head for linkedlist
+	int size = 0;
 	SingleLinkedList()
 	{
 		this.head = null;
@@ -58,6 +61,26 @@ class SingleLinkedList
 		}
 	}
 
+	//method to calculate the size of linkedlist
+	public int length()
+	{
+		Node temp = head;
+		if(temp==null)
+		{
+			return 0;
+		}
+		else
+		{
+			while(temp!=null)
+			{
+				size = size+1;
+				temp = temp.next_node;
+			}
+		}
+		return size;
+	}
+
+	public 
 	public void display()
 	{
 		Node current = head; //like a pointer
