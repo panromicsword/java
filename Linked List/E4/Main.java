@@ -20,6 +20,7 @@ class Main
 		sl.display();
 		System.out.println("");
 		System.out.println("Size "+sl.length());
+		sl.traverse();
 	}
 }
 // Node class which is used to ceate a node for linkedlist
@@ -80,6 +81,29 @@ class SingleLinkedList
 		return size;
 	}
 
+	public void traverse()
+	{
+		int position = 0;
+		Node temp = head;
+		if(temp == null)
+		{
+			System.out.println("Empty");
+		}
+		else
+		{
+			while(temp!=null)
+			{
+				System.out.println("Index - "+position+" & "+"Value - "+temp.value);
+				temp = temp.next_node;
+				position++;
+			}
+		}
+	}
+
+	public void insertAtAnyPosition()
+	{
+		
+	}
 	public void display()
 	{
 		Node current = head; //like a pointer
