@@ -80,7 +80,6 @@ class SingleLinkedList
 		return size;
 	}
 
-	public 
 	public void display()
 	{
 		Node current = head; //like a pointer
