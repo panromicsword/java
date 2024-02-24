@@ -21,6 +21,8 @@ class Main
 		System.out.println("");
 		System.out.println("Size "+sl.length());
 		sl.traverse();
+		sl.insert(0,100);
+		sl.display();
 	}
 }
 // Node class which is used to ceate a node for linkedlist
@@ -100,10 +102,28 @@ class SingleLinkedList
 		}
 	}
 
-	public void insertAtAnyPosition()
+	public void insert(int index,int data)
 	{
-		
+		Node newNode = new Node(data);
+		//only applicable for 0th position
+		if(index == 0)
+		{
+			newNode.next_node = head;
+			head = newNode;
+		}	
+		int i;
+		Node current = head;
+		for(i=0;i<index-1 && current!=null;i++)
+		{
+			current = current.next_node;
+		}
+
+		newNode.next_node = current.next_node;
+		current.next_node = newNode;
+
 	}
+
+	//display the LinkedList
 	public void display()
 	{
 		Node current = head; //like a pointer
@@ -141,6 +161,7 @@ class SingleLinkedList
 		}
 		return status;
 	}
+
 
 	public void addAtBeginning(int data)
 	{
