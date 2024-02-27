@@ -19,6 +19,7 @@ public class Main
 		l.delete(0);
 		l.display();
 		l.delete(2);
+		l.display();
 	}
 }
 class Node
@@ -34,9 +35,11 @@ class Node
 class LinkedList
 {
 	Node head;
+	Node tail;
 	LinkedList()
 	{
 		this.head = null;
+		this.tail = null;
 	}
 	//1. method to add the data in the linked list at last
 	public void add(int data)
@@ -46,6 +49,7 @@ class LinkedList
 		if(head == null)
 		{
 			this.head = temp;
+			this.tail = temp;
 		}
 		else
 		{
@@ -56,6 +60,7 @@ class LinkedList
 				pointer = pointer.next_node;
 			}
 			pointer.next_node = temp;
+			tail = temp;
 		}
 	}
 	//method to display the data
