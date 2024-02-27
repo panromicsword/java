@@ -16,6 +16,9 @@ public class Main
 		l.display();
 		l.insertAtIndex(2,18);
 		l.display();
+		l.delete(0);
+		l.display();
+		l.delete(2);
 	}
 }
 class Node
@@ -108,6 +111,31 @@ class LinkedList
 			}
 			temp.next_node = pointer.next_node;
 			pointer.next_node = temp;
+		}
+	}
+
+	public void delete(int index)
+	{
+		Node temp;
+		int position = 0;
+		if(index==0)
+		{
+			temp =  head;
+			head = head.next_node;
+		}
+		else
+		{
+			Node pointer = head;
+			int i;
+			while(pointer!=null)
+			{
+				if(position==index)
+				{
+					temp = 
+					pointer = temp.next_node;
+				}
+			}
+			
 		}
 	}
 }
