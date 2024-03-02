@@ -16,10 +16,12 @@ public class Main
 		l.display();
 		l.insertAtIndex(2,18);
 		l.display();
-		l.delete(0);
-		l.display();
+		System.out.println(l.length());
+		l.printAdd();
+		l.isContains(200);
 		l.delete(2);
 		l.display();
+		System.out.println(l.length());
 	}
 }
 class Node
@@ -36,6 +38,7 @@ class LinkedList
 {
 	Node head;
 	Node tail;
+	int size=0;
 	LinkedList()
 	{
 		this.head = null;
@@ -81,6 +84,19 @@ class LinkedList
 			System.out.println("");
 		}
 	}
+	//method to check the size
+	public int length()
+	{
+		int length = 0;
+		Node pointer = head;
+		while(pointer!=null)
+		{
+			length = length+1;
+			pointer = pointer.next_node;
+		}
+		size = length;
+		return length;
+	}
 	//method to insert data at beginning
 	public void insertAtBeginning(int data)
 	{
@@ -119,28 +135,68 @@ class LinkedList
 		}
 	}
 
-	public void delete(int index)
+	//method to print the address of the nodes
+	public void printAdd()
 	{
-		Node temp;
-		int position = 0;
-		if(index==0)
+		Node pointer = head;
+		System.out.println("Head|"+pointer);
+		while(pointer!=null)
 		{
-			temp =  head;
-			head = head.next_node;
+			System.out.println(pointer.data+"|"+pointer);
+			pointer = pointer.next_node;
+		}
+	}
+
+	//method to check a data
+	public void isContains(int data)
+	{
+		Node pointer=head;
+		boolean setStatus = false;
+		while(pointer!=null)
+		{
+			if(pointer.data==data)
+			{
+				setStatus =true;
+				break;	
+			}
+			pointer =pointer.next_node;
+		}
+		if(setStatus == false)
+		{
+			System.out.println("Invalid data");
+		}
+	}
+
+	//method to delete
+	public void delete(int data)
+	{
+		Node current = head;
+		Node previous = null;
+		if(head == null)
+		{
+			System.out.println("Empty");
+		}
+		else if(pointer.data == data)
+		{
+			head = pointer.next_node;
+			return;
 		}
 		else
 		{
-			Node pointer = head;
-			int i;
-			while(pointer!=null)
+			while(current!=null && current.data!=data)
 			{
-				if(position==index)
-				{
-					temp = 
-					pointer = temp.next_node;
-				}
+				previous = current;
+				current = current.next_node;
 			}
-			
+			if(current == null)
+			{
+				System.out.println("Value is not present");
+			}
+			else
+			{
+				previous.next_node = current.next_node;
+				current.next_node = null;
+			}
 		}
 	}
 }
